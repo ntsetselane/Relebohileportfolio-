@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  position: fixed;
+}
+
+.profile {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;   /* creates space below image */
+  display: block;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socials a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #00ff88;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.socials i {
+  font-size: 18px;
+}
+
+.btn {
+  display: block;
+  background: #00ff88;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Main */
+.main {
+  margin-left: 300px;
+  padding: 40px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding: 10px;
+}
+
+.nav a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.nav a.active {
+  color: #00ff88;
+}
+
+/* Sections */
+.section {
+  margin: 80px 0;
+  transition: 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typing */
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Cards */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #00ff88;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.card a:hover {
+  background: white;
+}
+
+/* Contact */
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #111;
+  border: none;
+  color: white;
+}
+
+.contact-form button {
+  background: #00ff88;
+  border: none;
+  padding: 10px;
+}

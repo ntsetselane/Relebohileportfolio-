@@ -63,9 +63,28 @@ window.addEventListener("scroll", () => {
 document.getElementById("themeToggle").onclick = () => {
   document.body.classList.toggle("light");
 };
+  //Send Info
+function sendGmail(event) {
+  event.preventDefault();
 
-// Fake Contact Submit
-document.querySelector(".contact-form").onsubmit = (e) => {
-  e.preventDefault();
-  alert("Message sent successfully 🚀");
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const subject = encodeURIComponent("Website Message from " + name);
+
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    "Message:\n" + message
+  );
+
+  const gmailUrl =
+    "https://mail.google.com/mail/?view=cm&fs=1" +
+    "&to=relebohilefntsetselane@gmail.com" +
+    "&su=" + subject +
+    "&body=" + body;
+
+  window.open(gmailUrl, "_blank");
+
 };
